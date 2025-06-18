@@ -1,4 +1,8 @@
 <div class="bg-slate-100 mx-auto p-1 text-center w-1/2">
   <h4 class="font-bold">Parent Component</h4>
-  <app-child [parentString]="message" />
+  <app-child [parentString]="message" (emitter)="onReceiveMessage($event)" />
+
+  <p class="p-2">
+    Message from Child <span class="text-blue-500">{{ messageFromChild }}</span>
+  </p>
 </div>

@@ -3,4 +3,10 @@
   <p>
     Message from Parent : <span class="text-red-500">{{ parentString }}</span>
   </p>
+  <input
+    type="text"
+    placeholder="Please enter to data to send to parent"
+    (keydown)="onKeyDown()"
+    [(ngModel)]="inputString"
+  />
 </div>

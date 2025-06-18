@@ -9,5 +9,10 @@ import { ChildComponent } from '../child/child.component';
   styleUrl: './parent.component.scss',
 })
 export class ParentComponent {
-  message: string = 'This is coming from Parent';
+  message: string = 'This is coming from Parent, X, Y, Z ...';
+  messageFromChild: string = '';
+
+  onReceiveMessage(value: string) {
+    this.messageFromChild = value;
+  }
 }
