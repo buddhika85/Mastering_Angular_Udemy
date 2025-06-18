@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ParentComponent } from './child-parent-demo/parent/parent.component';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ParentComponent],
+  imports: [HighlightDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
