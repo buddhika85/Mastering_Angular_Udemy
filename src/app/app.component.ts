@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ParentComponent } from './child-parent-demo/parent/parent.component';
 import { HighlightDirective } from './highlight.directive';
+import { UnderlineDirective } from './underline.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HighlightDirective],
+  imports: [HighlightDirective, UnderlineDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
