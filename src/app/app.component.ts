@@ -8,7 +8,11 @@ import { UnderlineDirective } from './underline.directive';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HighlightDirective, UnderlineDirective],
+  imports: [
+    HighlightDirective,
+    UnderlineDirective,
+    TemplateDrivenFormComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
