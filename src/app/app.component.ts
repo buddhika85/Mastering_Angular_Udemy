@@ -4,15 +4,12 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ParentComponent } from './child-parent-demo/parent/parent.component';
 import { HighlightDirective } from './highlight.directive';
 import { UnderlineDirective } from './underline.directive';
+import { ReactiveTypedFormComponent } from './reactive-typed-form/reactive-typed-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    HighlightDirective,
-    UnderlineDirective,
-    TemplateDrivenFormComponent,
-  ],
+  imports: [ReactiveTypedFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
