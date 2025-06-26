@@ -1,0 +1,6 @@
+<div class="w-1/4 m-5 p-5 border rounded border-slate-400 mx-auto">
+  <button class="btn" (click)="changeValue()">Change (AT)Input()</button>
+  <button class="btn" (click)="toggle()">Toggle Child</button>
+
+  <app-child *ngIf="showChild" [value]="inputValue"></app-child>
+</div>
