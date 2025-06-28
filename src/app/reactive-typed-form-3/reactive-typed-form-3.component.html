@@ -1,0 +1,34 @@
+<div class="main-div">
+  <div class="content-div">
+    <h3 class="heading">Login</h3>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="form-div">
+        <label>Username</label>
+        <input type="text" class="input-box" formControlName="username" />
+        <div class="error-div">
+          @if((username.touched || username.dirty) && username.invalid) { @if
+          (username.errors?.['required']) {
+          <span>Required</span>
+          } @else if (username.errors?.['minlength']) {
+          <span>Min length of 2 expected</span>
+          } }
+        </div>
+
+        <label>Password</label>
+        <input type="password" class="input-box" formControlName="password" />
+        <div class="error-div">
+          @if((password.dirty || password.touched) && password.invalid) {
+          @if(password.errors?.['required']) {
+          <span>Required</span>
+          } @else if (password.errors?.['minlength']) {
+          <span>min length of 5 required</span>
+          } }
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn" onclick="onReset()">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

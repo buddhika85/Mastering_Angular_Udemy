@@ -6,11 +6,12 @@ import { HighlightDirective } from './highlight.directive';
 import { UnderlineDirective } from './underline.directive';
 import { ReactiveTypedFormComponent } from './reactive-typed-form/reactive-typed-form.component';
 import { ReactiveTypedForm2Component } from './reactive-typed-form-2/reactive-typed-form-2.component';
+import { ReactiveTypedForm3Component } from './reactive-typed-form-3/reactive-typed-form-3.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveTypedForm2Component], // ParentComponent --> for life cycle hooks demo
+  imports: [ReactiveTypedForm3Component], // ParentComponent --> for life cycle hooks demo
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

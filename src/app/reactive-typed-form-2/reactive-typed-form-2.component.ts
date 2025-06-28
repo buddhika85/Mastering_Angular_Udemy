@@ -16,19 +16,23 @@ import {
 })
 export class ReactiveTypedForm2Component implements OnInit {
   loginDto: LoginDto = { username: '', password: '' };
-  formGroup!: FormGroup;
+
   formBuilder: FormBuilder = inject(FormBuilder);
+  formGroup!: FormGroup<{
+    username: FormControl<string>;
+    password: FormControl<string>;
+  }>;
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      username: new FormControl<string>(this.loginDto.username, [
-        Validators.required,
-        Validators.minLength(2),
-      ]),
-      password: new FormControl<string>(this.loginDto.password, [
-        Validators.required,
-        Validators.minLength(5),
-      ]),
+      username: new FormControl<string>(this.loginDto.username, {
+        nonNullable: true,
+        validators: [Validators.required, Validators.minLength(2)],
+      }),
+      password: new FormControl<string>(this.loginDto.password, {
+        nonNullable: true,
+        validators: [Validators.required, Validators.minLength(5)],
+      }),
     });
   }
 
